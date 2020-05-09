@@ -8,7 +8,11 @@ import io
 from PIL import Image
 import config
 
-import tensorflow as tf
+#버전 업그레이드로 에러가 너무 많이나서 
+#orgin code : import tensorflow as tf
+import tensorflow.compat.v1 as tf
+#object_detection.utils 오류를 해결하기 위함
+os.environ['PYTHONPATH'] += ':/content/models/research/:/content/models/research/slim/'
 from object_detection.utils import dataset_util
 
 
